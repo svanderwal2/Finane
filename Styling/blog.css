@@ -1,19 +1,49 @@
+body {
+  display: block;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
 /*     NAVBAR    */
 
-.navbar {
+.topnav {
   background-color: #e3f2fd;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  overflow: hidden;
 }
 
-.navbar-brand{
-  text-transform: uppercase;
-  font-size: 35px;
+.topnav a.navbar-brand {
+  font-size: 28px;
 }
 
-ul.navbar-nav li {
-  padding: 5px 15px;
+.topnav a {
+  float: left;
+  display: block;
+  color: #56656a;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.nav-link:hover {
+  color: black;
+  font-weight: 500;
+}
+
+.topnav a.nav-link.active {
+  background-color: #e3f2fd;
+  font-weight: 500;
+  color: #035ef9;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 /*    SECTION 1    */
@@ -36,6 +66,7 @@ h2.blog-header {
   font-size: 50px;
   font-weight: 300;
   letter-spacing: .4rem;
+  margin: 0;
 }
 
 /*    SECTION 2    */
@@ -73,6 +104,10 @@ h3.post-header {
   justify-content: center;
 }
 
+div.card-holder-6 {
+  margin-bottom: 35px;
+}
+
 .card {
   margin: 25px 5px;
   max-height: 550px;
@@ -96,7 +131,7 @@ a.post-btn {
 .footer {
   display: flex;
   justify-content: center;
-  margin-top: 55px;
+  margin-top: 0px;
   padding: 35px 45px;
   background-color: #e3f2fd;
 }
@@ -113,8 +148,15 @@ a.post-btn {
   font-size: 25px;
 }
 
-.nav-link {
+a.nav-link {
   color: rgba(0,0,0,0.5);
+  margin-top: 9px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: black;
+  font-weight: 450;
 }
 
 .soc-med-wrapper .fa {
@@ -124,8 +166,13 @@ a.post-btn {
   text-decoration: none;
 }
 
+.fa {
+  text-decoration: none;
+  color: #26829b;
+}
+
 .fa:hover {
-  opacity: 0.55;
+  color: black;
 }
 
 /*    RESPONSIVE    */

@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>FINANE</title>
     <script src="/Javascript/jquery.js" type="text/javascript"></script>
-    <script src="/Styling/bootstrap-4.0.0-dist/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/Javascript/index.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/Styling/main.css">
-    <link rel="stylesheet" href="/Styling/bootstrap-4.0.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
@@ -14,32 +13,16 @@
   
 <!--    NAVBAR    -->
   
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="/Layout/index.html">| FINANE |</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="/Layout/index.html">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Layout/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Layout/blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Layout/contact.html">Contact</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+    <div class="topnav" id="myTopnav">
+      <a class="navbar-brand" href="index.html">| FINANE |</a>
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="/Layout/about.html">About</a>
+      <a class="nav-link" href="/Layout/blog.html">Blog</a>
+      <a class="nav-link" href="/Layout/contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
 <!--    SECTION 1    -->
   
@@ -73,7 +56,9 @@
           <div class="card-body">
             <h5 class="card-title">Personal Finance: Refresher</h5>
             <p class="card-text">In this post we'll revisit the 7 essential components of a successul financial future.</p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +68,9 @@
           <div class="card-body">
             <h5 class="card-title">Building Your Wealth Plan</h5>
             <p class="card-text">A well built wealth plan is a requirement if you expect to grow and keep a meaningful net worth.</p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -93,7 +80,9 @@
           <div class="card-body">
             <h5 class="card-title">Debunking Company Equity</h5>
             <p class="card-text">Restricted Stock Units, Non-Quals, and Incentive Stock Options: all you need to know.</p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -103,7 +92,9 @@
           <div class="card-body">
             <h5 class="card-title">What Allocation Is Right For Me?</h5>
             <p class="card-text">How much of your portfolio should be in stocks, bonds and cash.</p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -113,7 +104,9 @@
           <div class="card-body">
             <h5 class="card-title">Trusts: Does My Family Need One?</h5>
             <p class="card-text">Esate planning is essential for everyone. Here we'll talk about how to protect your loved ones.</p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -123,7 +116,9 @@
           <div class="card-body">
             <h5 class="card-title">When Do I Need An Advisor?</h5>
             <p class="card-text">Performance. Fees. Auxiliary Services. We'll cover it all in our advisor necessity guide. </p>
-            <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            <div class="btn-wrapper">
+              <a type="text" class="post-btn" href="/Layout/post.html">Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -132,18 +127,16 @@
 <!--    SUBSCRIBE    -->
     
     <form action="action_page.php">
-      <div class="sub-wrapper">
-        <div class="container">
-          <h2 class="sub-heading">Subscribe To Our Weekly Newsletter</h2>
-          <p class="sub-body">Our weekly newsletter keeps you in the know about all things relevant in personal finance. You'll be able to turn these short blurbs into action items for your portfolio or financial plan.</p>
-        </div>
-        <div class="sub-input container">
-          <input class="sub-text" type="text" placeholder="Name" name="name" required>
-          <input class="sub-text" type="email" placeholder="Email" name="email" required>
-        </div>
-        <div class="sub-btn-wrapper">
-          <button class="btn btn-primary" type="submit" value="Submit">Subscribe</button>
-        </div>
+      <div class="container">
+        <h2 class="sub-heading">Subscribe to our Newsletter</h2>
+        <p class="sub-body">Our weekly newsletter keeps you in the know about all things relevant in personal finance. You'll be able to turn these short blurbs into action items for your portfolio or financial plan.</p>
+      </div>
+      <div class="container">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Email address" name="mail" required>
+      </div>
+      <div class="container">
+        <input class="btn btn-primary" type="submit" value="Subscribe">
       </div>
     </form>
     
